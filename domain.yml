@@ -1,0 +1,89 @@
+version: "3.6"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - start_mad_libs
+  - inform
+  - tell_story
+  - give_noun
+
+entities:
+  - nouns
+  - verb
+  - adjective
+
+slots:
+  noun:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: noun
+
+  verb:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: verb
+
+  adjective:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: adjective
+
+responses:
+  utter_greet:
+    - text: "Hey there! 👋 How are you doing?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day 😊"
+
+  utter_iambot:
+    - text: "I'm a helpful bot built using Rasa!"
+
+  utter_play_mad_libs:
+    - text: "Great! Let's play Mad Libs 🎉. Please give me a noun."
+
+  utter_ask_noun:
+    - text: "Please give me a noun."
+
+  utter_ask_verb:
+    - text: "Now tell me a verb."
+
+  utter_ask_adjective:
+    - text: "Finally, share an adjective!"
+
+  utter_show_story:
+    - text: "Here's your funny story: The {adjective} {noun} loves to {verb} every morning!"
+
+  utter_tell_story:
+    - text: "Here's your completed Mad Libs story! 🎉"
+
+  utter_story_complete:
+    - text: "That's your story! Hope you liked it!"
+  
+  utter_bye:
+    - text: "Goodbye! Have a nice day 👋"
+
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_iambot
+  - utter_play_mad_libs
+  - utter_ask_noun
+  - utter_ask_verb
+  - utter_ask_adjective
+  - utter_show_story
+  - utter_tell_story
+
+forms:
+  mad_libs_form:
+    required_slots:
+      - noun
+      - verb
+      - adjective

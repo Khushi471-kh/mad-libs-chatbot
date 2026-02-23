@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  rasa:
+    image: madlibsbot
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./:/app
+    command: >
+      rasa run --enable-api --cors "*" --debug
+    depends_on:
+      - action_server
+
+  action_server:
+    image: madlibsbot-actions
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./actions:/app/actions
