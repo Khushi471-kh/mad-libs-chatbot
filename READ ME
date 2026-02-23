@@ -1,0 +1,83 @@
+#Overview
+
+Mad Libs Bot is an interactive conversational AI chatbot that generates fun and creative stories by collecting user inputs such as nouns, verbs, and adjectives. Inspired by the classic Mad Libs game, the bot engages users in a guided conversation and dynamically constructs a humorous story based on their responses.
+The project demonstrates core conversational AI concepts including intent recognition, entity extraction, slot filling, and form-based dialogue management using the Rasa framework. A simple and responsive web interface built with HTML, CSS, and JavaScript allows users to interact with the chatbot in a user-friendly way.
+
+*Features
+- Interactive chatbot conversation flow
+
+- Intent recognition using Rasa NLU
+
+- Entity extraction (noun, verb, adjective)
+
+- Slot filling using form-based dialogue
+
+- Simple and clean web-based chat interface
+
+- Docker-ready backend setup
+
+- Version-controlled with Git & GitHub
+
+* Technologies Used*
+-Rasa (Core & NLU) – Natural Language Understanding and dialogue management
+-Python – Backend logic and chatbot functionality
+-HTML, CSS, JavaScript – Frontend chatbot interface
+-Docker – Containerization support
+-Git & GitHub – Version control and repository hosting
+
+ Project Structure
+MadLibsBot/
+│
+├── actions/
+├── data/
+├── domain.yml
+├── config.yml
+├── endpoints.yml
+├── index.html
+└── README.md
+▶️ How to Run (Frontend Only)
+
+Open the project folder.
+
+Double-click index.html.
+
+The chatbot interface will open in your browser.
+
+Start interacting with the bot to generate a story.
+
+Future Improvements
+
+Full REST API integration between frontend and Rasa backend
+
+Deployment using cloud platforms
+
+Enhanced UI design
+
+Support for multiple story templates
+How to Run the Project
+ Clone the Repository
+git clone https://github.com/your-username/MadLibsBot.git
+cd MadLibsBot
+# Create a Virtual Environment
+python -m venv venv
+# Activate the Virtual Environment
+
+#On Windows (PowerShell):
+venv\Scripts\activate
+When activated, you will see (venv) at the beginning of your terminal line.
+
+# Install Dependencies
+pip install -r requirements.txt
+# Train the Rasa Model
+asa train
+ #Run the Bot
+#In one terminal:
+rasa run actions
+#In another terminal:
+rasa shell
+#️# Deactivate Virtual Environment (When Done)
+deactivate
+
+ Author
+Khushi Khandelwal
+Built as a conversational AI project using Rasa.
